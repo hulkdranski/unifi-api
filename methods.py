@@ -124,7 +124,6 @@ def salvar_planilha(vouchers, nome, setor, dispo, dias):
         ws = wb['FUNCIONÁRIOS']
 
         hoje = datetime.now()
-        # Adicionar 75 dias à data de hoje
         data_futura = hoje + timedelta(days=int(dias))
         data_futura = data_futura.strftime("%d/%m/%Y")
 
