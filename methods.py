@@ -23,7 +23,7 @@ def create_voucher(session, dias, quant, dispo, setor, nome):
     create_url = f"{base_url}/api/s/default/cmd/hotspot"
     payload = {
         "cmd": "create-voucher",
-        "expire": dias * 1440,
+        "expire": int(dias) * 1440,
         "n": quant,
         "note": notas
     }
