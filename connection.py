@@ -17,10 +17,10 @@ def create_table(cursor):
 
 def select_data(conn, cursor, code):
     cursor.execute(f'SELECT id FROM users WHERE code = {code}')
-    voucher_id = cursor.fetchone()  # Use fetchone() se espera apenas um resultado
+    voucher_id = cursor.fetchone()  
     conn.close()
 
     if voucher_id:
-        return voucher_id[0]  # Retorna apenas o valor dentro da tupla
+        return voucher_id[0]  
     else:
-        return None  # Caso não haja resultado, retorna None
+        return None  
